@@ -10,9 +10,15 @@
     <meta name="author" content="谭于磊">
     
     <meta name="description" content="position定位
-relative:相对定位，相对自身当前位置上下左右定位，只可以为负数。可以对块，行标签使用。不会改变标签属性
+relative:相对定位
 
-absolute:绝对定位，脱离文档流，改变标签属性，类似于如果没有父级标签设置relative；当前标签元素是以body可视区域为起点。*如果有父级标签设置rel">
+相对自身当前位置上下左右定位，只可以为负数。可以对块，行标签使用。不会改变标签属性。代码如下:
+
+.div1{
+     width:200px;
+     height:150px;
+     background:green;
+     pos">
     
     
     
@@ -281,7 +287,7 @@ absolute:绝对定位，脱离文档流，改变标签属性，类似于如果�
     </p>
   <p class="article-time">
     <time datetime="2015-11-25T13:49:53.000Z" itemprop="datePublished">2015-11-25</time>
-    更新日期:<time datetime="2015-11-26T09:28:47.000Z" itemprop="dateModified">2015-11-26</time>
+    更新日期:<time datetime="2015-11-26T12:17:32.000Z" itemprop="dateModified">2015-11-26</time>
     
   </p>
 </header>
@@ -294,13 +300,51 @@ absolute:绝对定位，脱离文档流，改变标签属性，类似于如果�
 		</div>
 		
 		<h1 id="position定位">position定位</h1><ul>
-<li><p><strong>relative:</strong>相对定位，相对自身当前位置上下左右定位，只可以为负数。可以对块，行标签使用。不会改变标签属性</p>
-</li>
-<li><p><strong>absolute:</strong>绝对定位，脱离文档流，改变标签属性，类似于如果没有父级标签设置relative；当前标签元素是以body可视区域为起点。<br>*如果有父级标签设置relative;则以父级标签位置为起点。</p>
-</li>
-<li><p><strong>fixed:</strong>固定定位，将元素相对于窗口固定位置。</p>
-</li>
+<li><strong>relative:</strong>相对定位</li>
 </ul>
+<p>相对自身当前位置上下左右定位，只可以为负数。可以对块，行标签使用。不会改变标签属性。代码如下:</p>
+<blockquote>
+<pre><code><span class="class">.div1</span><span class="rules">{
+     <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">200px</span></span></span>;
+     <span class="rule"><span class="attribute">height</span>:<span class="value"><span class="number">150px</span></span></span>;
+     <span class="rule"><span class="attribute">background</span>:<span class="value">green</span></span>;
+     <span class="rule"><span class="attribute">position</span>:<span class="value">relative</span></span>;
+     <span class="rule"><span class="attribute">top</span>:<span class="value">-<span class="number">20px</span></span></span>;
+     <span class="rule"><span class="attribute">left</span>:<span class="value"><span class="number">0px</span></span></span>;
+ }</span>
+</code></pre></blockquote>
+<p>代码执行后效果如下，绿色的div经过relative定位后，从虚线的位置移动到当前位置，是以自身为基础进行定位。<br><img src="http://7xoona.com1.z0.glb.clouddn.com/position1.png" alt="relative效果"></p>
+<ul>
+<li><strong>absolute:</strong>绝对定位</li>
+</ul>
+<p>脱离文档流，改变标签属性，类似于如果没有父级标签设置relative；当前标签元素是以body可视区域为起点。<br>*如果有父级标签设置relative;则以父级标签位置为起点。代码如下:</p>
+<blockquote>
+<pre><code><span class="class">.div2</span><span class="rules">{
+  <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">200px</span></span></span>;
+  <span class="rule"><span class="attribute">height</span>:<span class="value"><span class="number">150px</span></span></span>;
+  <span class="rule"><span class="attribute">background</span>:<span class="value">yellow</span></span>;
+  <span class="rule"><span class="attribute">position</span>:<span class="value">absolute</span></span>;
+  <span class="rule"><span class="attribute">top</span>:<span class="value">-<span class="number">20px</span></span></span>;
+  <span class="rule"><span class="attribute">left</span>:<span class="value"><span class="number">0px</span></span></span>;
+}</span>
+</code></pre></blockquote>
+<p>代码执行后效果如下，黄色的div经过absolute定位后，从虚线的位置移动到当前位置，以body为基础进行定位。<br><img src="http://7xoona.com1.z0.glb.clouddn.com/position2.jpg" alt="relative效果"></p>
+<p>position为absolute时，div以body为基础定位。但是，当div有父级shi</p>
+<ul>
+<li><strong>fixed:</strong>固定定位</li>
+</ul>
+<p>将元素相对于窗口固定位置。无论如何滚动滚动条，位置不变。代码如下:</p>
+<blockquote>
+<pre><code><span class="class">.div3</span><span class="rules">{
+      <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">200px</span></span></span>;
+      <span class="rule"><span class="attribute">height</span>:<span class="value"><span class="number">150px</span></span></span>;
+      <span class="rule"><span class="attribute">background</span>:<span class="value">red</span></span>;
+      <span class="rule"><span class="attribute">position</span>:<span class="value">fixed</span></span>;
+      <span class="rule"><span class="attribute">right</span>:<span class="value"><span class="number">0</span></span></span>;
+      <span class="rule"><span class="attribute">bottom</span>:<span class="value"><span class="number">0</span></span></span>;
+}</span>
+</code></pre></blockquote>
+<p>代码执行后效果如下，红色的div经过relative定位后，从虚线的位置移动到当前位置，是窗口为基础进行定位。而且滚动条滚动到什么位置，div的位置都不会发生改变，始终固定在这个位置。<br><img src="http://7xoona.com1.z0.glb.clouddn.com/position3.jpg" alt="relative效果"></p>
   
 	</div>
 		<footer class="article-footer clearfix">
