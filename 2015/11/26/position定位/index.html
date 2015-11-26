@@ -12,7 +12,7 @@
     <meta name="description" content="position定位
 relative:相对定位
 
-相对自身当前位置上下左右定位，只可以为负数。可以对块，行标签使用。不会改变标签属性。代码如下:
+相对自身当前位置上下左右定位，值可以为负数。可以对块，行标签使用。不会改变标签属性。代码如下:
 
 .div1{
      width:200px;
@@ -287,7 +287,7 @@ relative:相对定位
     </p>
   <p class="article-time">
     <time datetime="2015-11-26T12:47:12.000Z" itemprop="datePublished">2015-11-26</time>
-    更新日期:<time datetime="2015-11-26T13:02:18.000Z" itemprop="dateModified">2015-11-26</time>
+    更新日期:<time datetime="2015-11-26T13:27:08.000Z" itemprop="dateModified">2015-11-26</time>
     
   </p>
 </header>
@@ -302,7 +302,7 @@ relative:相对定位
 		<h1 id="position定位">position定位</h1><ul>
 <li><strong>relative:</strong>相对定位</li>
 </ul>
-<p>相对自身当前位置上下左右定位，只可以为负数。可以对块，行标签使用。不会改变标签属性。代码如下:</p>
+<p>相对自身当前位置上下左右定位，值可以为负数。可以对块，行标签使用。不会改变标签属性。代码如下:</p>
 <blockquote>
 <pre><code><span class="class">.div1</span><span class="rules">{
      <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">200px</span></span></span>;
@@ -320,7 +320,7 @@ relative:相对定位
 </ul>
 <p>脱离文档流，改变标签属性，类似于如果没有父级标签设置relative；当前标签元素是以body可视区域为起点。<br>*如果有父级标签设置relative;则以父级标签位置为起点。代码如下:</p>
 <blockquote>
-<pre><code><span class="class">.div2</span><span class="rules">{
+<pre><code><span class="class">.box2</span><span class="rules">{
   <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">200px</span></span></span>;
   <span class="rule"><span class="attribute">height</span>:<span class="value"><span class="number">150px</span></span></span>;
   <span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">0</span> auto</span></span>;
@@ -331,13 +331,32 @@ relative:相对定位
 }</span>
 </code></pre></blockquote>
 <p>代码执行后效果如下，黄色的div经过absolute定位后，从虚线的位置移动到当前位置，以body为基础进行定位。<br><img src="http://7xoona.com1.z0.glb.clouddn.com/position2.jpg" alt="relative效果"></p>
-<p>position为absolute时，div以body为基础定位。但是，当div有父级shi</p>
+<p>position为absolute时，div以body为基础定位。但是，当div父级有relative或者absolute定位时，div则是以父级为基础定位。代码如下:</p>
+<blockquote>
+<pre><code>    <span class="class">.box</span><span class="rules">{
+        <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">300px</span></span></span>;
+        <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">300px</span></span></span>;
+        <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">0</span> auto</span></span>;
+        <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">3px</span> <span class="hexcolor">#eee</span> solid</span></span>;
+        <span class="rule"><span class="attribute">position</span>:<span class="value"> relative</span></span>;
+    }</span>
+    <span class="class">.box</span> <span class="class">.box2</span><span class="rules">{
+      <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">200px</span></span></span>;
+      <span class="rule"><span class="attribute">height</span>:<span class="value"><span class="number">150px</span></span></span>;
+      <span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">0</span> auto</span></span>;
+      <span class="rule"><span class="attribute">background</span>:<span class="value">yellow</span></span>;
+      <span class="rule"><span class="attribute">position</span>:<span class="value">absolute</span></span>;
+      <span class="rule"><span class="attribute">top</span>:<span class="value">-<span class="number">20px</span></span></span>;
+      <span class="rule"><span class="attribute">left</span>:<span class="value"><span class="number">0px</span></span></span>;
+}</span>
+</code></pre></blockquote>
+<p>代码执行后效果如下，黄色的div并没有以body为基础进行定位，而是以他的父级为基础进行绝对定位。<br><img src="http://7xoona.com1.z0.glb.clouddn.com/position4.png" alt=""></p>
 <ul>
 <li><strong>fixed:</strong>固定定位</li>
 </ul>
 <p>将元素相对于窗口固定位置。无论如何滚动滚动条，位置不变。代码如下:</p>
 <blockquote>
-<pre><code><span class="class">.div3</span><span class="rules">{
+<pre><code><span class="class">.box3</span><span class="rules">{
       <span class="rule"><span class="attribute">width</span>:<span class="value"><span class="number">200px</span></span></span>;
       <span class="rule"><span class="attribute">height</span>:<span class="value"><span class="number">150px</span></span></span>;
       <span class="rule"><span class="attribute">margin</span>:<span class="value"><span class="number">0</span> auto</span></span>;
@@ -369,9 +388,9 @@ relative:相对定位
  
 
 <div class="prev">
-<a href="/2015/11/26/css/"  title="css">
+<a href="/2015/11/26/css/"  title="border属性及应用">
  <strong>PREVIOUS:</strong><br/> 
- <span>css
+ <span>border属性及应用
 </span>
 </a>
 </div>
@@ -517,15 +536,11 @@ relative:相对定位
       </li>
     
       <li>
-        <a href="/2015/11/26/css/">css</a>
+        <a href="/2015/11/26/css/">border属性及应用</a>
       </li>
     
       <li>
         <a href="/2015/11/25/第一个微博/">随笔</a>
-      </li>
-    
-      <li>
-        <a href="/2015/11/24/hello-world/">Hello World</a>
       </li>
     
   </ul>
@@ -535,7 +550,7 @@ relative:相对定位
   
   <div class="archiveslist">
     <p class="asidetitle"><a href="/archives">Archives</a></p>
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">4</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">3</span></li></ul>
   </div>
 
 
