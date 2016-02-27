@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>html学习总结 | 不羁放纵爱自由</title>
+    <title>html回顾 | 不羁放纵爱自由</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
     
     <meta name="author" content="谭于磊">
@@ -277,7 +277,7 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/02/25/html学习总结/" title="html学习总结" itemprop="url">html学习总结</a>
+      <a href="/2016/02/25/html学习总结/" title="html回顾" itemprop="url">html回顾</a>
   </h1>
   <p class="article-author">By
     
@@ -285,7 +285,7 @@
     </p>
   <p class="article-time">
     <time datetime="2016-02-25T07:48:20.000Z" itemprop="datePublished">2016-02-25</time>
-    更新日期:<time datetime="2016-02-26T01:20:35.000Z" itemprop="dateModified">2016-02-26</time>
+    更新日期:<time datetime="2016-02-27T12:09:11.000Z" itemprop="dateModified">2016-02-27</time>
     
   </p>
 </header>
@@ -294,10 +294,10 @@
 		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#html回顾"><span class="toc-number">1.</span> <span class="toc-text">html回顾</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#html基本结构"><span class="toc-number">1.0.1.</span> <span class="toc-text">html基本结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标签"><span class="toc-number">1.0.2.</span> <span class="toc-text">标签</span></a></li></ol></li></ol></li></ol>
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#html回顾"><span class="toc-number">1.</span> <span class="toc-text">html回顾</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#html基本结构"><span class="toc-number">1.1.</span> <span class="toc-text">html基本结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#标签"><span class="toc-number">1.2.</span> <span class="toc-text">标签</span></a></li></ol></li></ol>
 		</div>
 		
-		<h1 id="html回顾">html回顾</h1><h3 id="html基本结构">html基本结构</h3><pre><code><span class="tag">&lt;html&gt;</span>
+		<h1 id="html回顾">html回顾</h1><h2 id="html基本结构">html基本结构</h2><pre><code><span class="tag">&lt;html&gt;</span>
     <span class="tag">&lt;head&gt;</span>
         <span class="tag">&lt;title&gt;</span><span class="tag">&lt;/title&gt;</span>
     <span class="tag">&lt;/head&gt;</span>
@@ -305,7 +305,7 @@
     <span class="tag">&lt;/body&gt;</span>
 <span class="tag">&lt;/html&gt;</span>
 </code></pre><p>这里需要注意的是html标签是不区分大小写的，但是为了方便观看，建议用小写。</p>
-<h3 id="标签">标签</h3><ul>
+<h2 id="标签">标签</h2><ul>
 <li><p>html标签</p>
 <p>  根标签，这个标签的作用是告诉浏览器，这是一个html文档</p>
 </li>
@@ -332,7 +332,48 @@
 <pre><code><span class="tag">&lt;<span class="title">meta</span> <span class="attribute">http-equiv</span>=<span class="value">"refresh"</span> <span class="attribute">content</span>=<span class="value">"0;url=https://www.baidu.com/"</span>/&gt;</span>
 </code></pre><p>  8.这个标签记录了页面作者的信息</p>
 <pre><code>&lt;meta <span class="property">name</span>=<span class="string">"author"</span> content=<span class="string">"author name"</span>/&gt;
-</code></pre></li>
+</code></pre><p>  9.这个标签表示当前网页用于移动设备</p>
+<pre><code>&lt;meta <span class="property">name</span>=<span class="string">"viewport"</span> content=<span class="string">"width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"</span>/&gt;
+</code></pre><p>  meta标签几个常用的就先介绍的这里，想要了解跟详细的meta标签请参考<a href="http://quanquanxuan.github.io" target="_blank" rel="external">两面三道的博客</a></p>
+</li>
+<li><p>h1-h6标题标签</p>
+<p>  为了html文档更具语意性，html有6个标题标签，分别为h1、h2、h3、h4、h5、h6，这6个标签依据重要性递减，h1是最高等级。另外，在一篇html文档中可以出现多个标题标签，同个标题标签也可以出现多次。</p>
+</li>
+<li><p>p 段落标签</p>
+<p>  双标签，有默认的margin值，是块级标签 </p>
+</li>
+<li><p>em斜体 strong加粗</p>
+<p>  这两个都是行级双标签，两者都表示强调，但是在强调的语气上有区别，strong的强调较为强烈。下面举两个例子：</p>
+<p>  <em>我是斜体的强调</em></p>
+<p>  <strong>我是加粗的强调，我强调的更强烈哦</strong></p>
+</li>
+<li><p>div span</p>
+<p>  这两个标签放在一起，是因为这两个都没有语意。但区别在于，div是块级标签，表示容器。而span则是行级标签，表示包裹。通常我们用这两个标签包裹其他的标签，在对整体进行布局。</p>
+</li>
+<li><p>a 锚点链接</p>
+<p>  a标签，即超链接，这个标签有href、title、target等属性。其中href我们都很熟悉，就是这个超链接要跳转的地方。title就是这个超链接显示的内容。target表示打开链接时用什么目标打开，比较常见的是target＝_blank表示在新窗口打开当前链接。</p>
+</li>
+<li><p>img 图片标签</p>
+<p>  img标签，用来为html添加图片。这个标签有src、title、alt等属性。其中src表示图片的地址。title是图片的标题，当鼠标放在图片上方时，会出现对应的内容。alt这个属性是为了更好的让搜索引擎识别，告诉搜索引擎这是关于什么的图片。另外，当图片没有加载出来时会显示alt的内容。</p>
+</li>
+<li><p>q 短文本引用 blockquote 长文本引用</p>
+<p>  q标签用于html文档引用一句诗词，相当于“”，这样写会是你的文章更有语意化。</p>
+<p>  blockquote标签用于引用唱的文本，同样可以使你的html更有语意化。</p>
+</li>
+<li><p>br 换行</p>
+<p>  单标签，用于换行</p>
+</li>
+<li><p>hr 分割线标签</p>
+<p>  同样也是单标签，表示一条分割线</p>
+</li>
+<li><p>address 地址信息</p>
+<p>  双标签，用于为页面添加地址信息，样式为斜体。</p>
+</li>
+<li><p>code 单行代码 pre 多行代码</p>
+<p>  code标签是向网页添加一些计算机专业的变编程代码，而且代码只能为一行。</p>
+<p>  pre标签也是向网页添加代码，只是与code不同的是，可以添加多行代码。</p>
+<p>  今天写累了，明天继续。</p>
+</li>
 </ul>
   
 	</div>
@@ -343,7 +384,7 @@
 
 <div class="article-share" id="share">
 
-  <div data-url="http://yoursite.com/2016/02/25/html学习总结/" data-title="html学习总结 | 不羁放纵爱自由" data-tsina="null" class="share clearfix">
+  <div data-url="http://yoursite.com/2016/02/25/html学习总结/" data-title="html回顾 | 不羁放纵爱自由" data-tsina="null" class="share clearfix">
   </div>
 
 </div>
@@ -365,7 +406,7 @@
 
 
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="2016/02/25/html学习总结/" data-title="html学习总结" data-url="http://yoursite.com/2016/02/25/html学习总结/"></div>
+	<div class="ds-thread" data-thread-key="2016/02/25/html学习总结/" data-title="html回顾" data-url="http://yoursite.com/2016/02/25/html学习总结/"></div>
 <!-- 多说评论框 end -->
 </div>  
 
@@ -378,7 +419,7 @@
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#html回顾"><span class="toc-number">1.</span> <span class="toc-text">html回顾</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#html基本结构"><span class="toc-number">1.0.1.</span> <span class="toc-text">html基本结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标签"><span class="toc-number">1.0.2.</span> <span class="toc-text">标签</span></a></li></ol></li></ol></li></ol>
+  <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#html回顾"><span class="toc-number">1.</span> <span class="toc-text">html回顾</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#html基本结构"><span class="toc-number">1.1.</span> <span class="toc-text">html基本结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#标签"><span class="toc-number">1.2.</span> <span class="toc-text">标签</span></a></li></ol></li></ol>
   </div>
 
 <div id="asidepart">
@@ -498,7 +539,7 @@
   <ul class="entry">
     
       <li>
-        <a href="/2016/02/25/html学习总结/">html学习总结</a>
+        <a href="/2016/02/25/html学习总结/">html回顾</a>
       </li>
     
       <li>
